@@ -1,0 +1,14 @@
+.img-ct{
+  position: relative;
+  /* top: 50%; */
+  width:750rpx;
+  height:929rpx;
+  transform: translateY(10%)
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  height:70rpx;
+}

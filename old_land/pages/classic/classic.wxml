@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header">
+    <c-episode class="episode" index="{{classicData.index}}" />
+    <view class="like-container">
+      <c-like class="like" like="{{likeStatus}}" count="{{likeCount}}" bind:like="onLike" />
+      <c-logging class="share-btn" mytype="share">
+        <image class="share" slot="img" src="/images/icon/share.png" />
+      </c-logging>
+    </view>
+    
+  </view>
+  <c-movie hidden="{{classicData.type != 100}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+  <!-- != 100就隐藏 -->
+  <c-music wx:if="{{classicData.type == 200}}" 
+    img="{{classicData.image}}" 
+    content="{{classicData.content}}"
+    src="{{classicData.url}}"
+    title="{{classicData.title}}" />
+
+  <c-essay hidden="{{classicData.type != 300}}" img="{{classicData.image}}" content="{{classicData.content}}" />
+  <c-navi class="navi" 
+    title="{{classicData.title}}"
+    first="{{first}}" 
+    latest="{{latest}}"
+    bind:right="onPrevious" 
+    bind:left="onNext" />
+
+</view>
+

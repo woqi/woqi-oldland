@@ -1,0 +1,8 @@
+{
+  
+  "usingComponents": {
+    "c-book": "/components/book/index",
+    "c-search": "/components/search/index",
+    "c-tag": "/components/tag/index"
+  }
+}

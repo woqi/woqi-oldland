@@ -1,0 +1,4 @@
+<view class="img-ct">
+  <!-- <navigator class="nav" target="miniProgram" app-id="wx8ffc97ad5bcccc89" open-type="navigate"> -->
+  <image class="img" src="/images/mm.png" />
+</view>

@@ -1,0 +1,35 @@
+<view class="container">
+  <image src="/images/my/my@bg.png" class="bg"></image>
+  <c-logging wx:if="{{!authorized}}" class="avatar-position" 
+    bind:userLoggingInfo="onGetUserInfo" mytype="getUserInfo">
+    <view class="avatar" slot="img" >登录</view>
+    <!-- <image slot="img" class="avatar" src="/images/my/my.png" />  -->
+  </c-logging>
+  <view wx:if="{{authorized}}" class="avatar-container avatar-position">
+    <image src="{{userInfo.avatarUrl}}" class="avatar" />
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <!-- open-data不需要授权 无法录入js -->
+  <!-- <open-data class="avatar avatar-position" type="userAvatarUrl" /> -->
+  <!-- 原始小程序，录入js方法 -->
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button> -->
+  <view class="about-container">
+    <view class="about-us">
+      <image src="/images/my/about.png" />
+      <text class="description" bind:tap="onJumpToAbout">关于我</text>
+    </view>
+    <view class="about-us">
+      <text class="book-num">{{bookCount}}</text>
+      <text class="description">喜欢的书</text>
+    </view>
+  </view>
+  <view class="like-container">
+    <image class="headline" src="/images/my/like.png" />
+    <view class="preview-container">
+      <block wx:for="{{classics}}" wx:key="">
+        <c-preview bind:tapping="onJumpToDetail" class="preview" classic="{{item}}" />
+      </block>
+    </view>
+  </view>
+
+</view>

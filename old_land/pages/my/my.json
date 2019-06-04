@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "c-logging":"/components/logging/index",
+    "c-preview":"/components/preview/index"
+  }
+}
